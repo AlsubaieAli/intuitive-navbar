@@ -8,7 +8,7 @@
 body {
   width: 100%;
   height: 100vh;
-  background-color: #32292F;
+  background-color: #bbbbbb;
 }
 
 .main-container {
@@ -65,16 +65,16 @@ body {
   width: 20px;
   height: 20px;
   color: white;
-  -webkit-transition: 0.2s ease-in-out;
-  transition: 0.2s ease-in-out;
+  -webkit-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
 }
 
 .main-container nav ul li .nav-text {
   position: absolute;
   bottom: -20px;
   opacity: 0;
-  -webkit-transition: 0.2s ease-in-out;
-  transition: 0.2s ease-in-out;
+  -webkit-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
 }
 
 .main-container nav ul li.active .nav-icon {
@@ -93,24 +93,24 @@ body {
 }
 
 .main-container nav ul li:nth-child(3).active ~ .selection {
-  left: 165px;
+  left: 163px;
 }
 
 .main-container nav ul li:nth-child(4).active ~ .selection {
-  left: 240px;
+  left: 239px;
 }
 
 .main-container nav ul .selection {
   width: 50px;
   height: 50px;
   background-color: #D1E3DD;
-  border: 4px solid #32292F;
+  border: 4px solid #bbbbbb;
   border-radius: 50px;
   position: absolute;
   top: -27px;
   left: 15px;
-  -webkit-transition: .2s ease-in-out;
-  transition: .2s ease-in-out;
+  -webkit-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
 }
 
 .main-container nav ul .selection::before, .main-container nav ul .selection::after {
@@ -118,8 +118,8 @@ body {
   width: 10px;
   height: 10px;
   background-color: #6E7DAB;
-  -webkit-box-shadow: 0 -5px 0 0 #32292F;
-          box-shadow: 0 -5px 0 0 #32292F;
+  -webkit-box-shadow: 0 -5px 0 0 #bbbbbb;
+          box-shadow: 0 -5px 0 0 #bbbbbb;
 }
 
 .main-container nav ul .selection::before {

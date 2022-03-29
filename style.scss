@@ -1,9 +1,10 @@
 $nav-border-radius: 5px;
-$body-bg: #32292F;
+$body-bg: #bbbbbb;
 $nav-bg: #6E7DAB;
 $selection-bg: #D1E3DD;
 $selection-initial-top: -27px;
 $selection-initial-left: 15px;
+$transition-time: 0.4s;
 
 *{
   margin: 0;
@@ -54,7 +55,7 @@ body{
           height: $size;
           color: white;
 
-          transition: 0.2s ease-in-out;
+          transition: $transition-time ease-in-out;
         }
 
         .nav-text{
@@ -62,7 +63,7 @@ body{
           bottom: -20px;
           opacity: 0;
 
-          transition: 0.2s ease-in-out;
+          transition: $transition-time ease-in-out;
         }
 
 
@@ -83,11 +84,11 @@ body{
         }
 
         &:nth-child(3).active ~ .selection{
-          left: 165px;
+          left: 163px;
         }
 
         &:nth-child(4).active ~ .selection{
-          left: 240px;
+          left: 239px;
         }
       }
 
@@ -103,7 +104,7 @@ body{
         top: $selection-initial-top;
         left: $selection-initial-left;
 
-        transition: .2s ease-in-out;
+        transition: $transition-time ease-in-out;
 
         &::before, &::after{
           content: '';

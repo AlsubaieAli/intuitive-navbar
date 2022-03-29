@@ -1,3 +1,3 @@
 # Simple Intuitive Navbar
 
-Demo link soon ...
+Demo link [Here](https://alsubaieali.github.io/intuitive-navbar/)
