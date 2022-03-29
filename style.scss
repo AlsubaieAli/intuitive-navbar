@@ -1,0 +1,132 @@
+$nav-border-radius: 5px;
+$body-bg: #32292F;
+$nav-bg: #6E7DAB;
+$selection-bg: #D1E3DD;
+$selection-initial-top: -27px;
+$selection-initial-left: 15px;
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  width: 100%;
+  height: 100vh;
+  background-color: $body-bg;
+}
+
+.main-container{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+  nav {
+    ul {
+      margin: 0;
+      position: relative;
+      padding: .5em .25em;
+      list-style: none;
+      display: flex;
+      background-color: $nav-bg;
+      color: white;
+      border-radius: $nav-border-radius;
+      box-shadow: 5px 5px 10px 2px rgba(69, 69, 69, 0.15);
+
+      li{
+        padding: .25em .5em;
+        min-width: 75px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        position: relative;
+
+        .nav-icon{
+          $size: 20px;
+          z-index: 99;
+          width: $size;
+          height: $size;
+          color: white;
+
+          transition: 0.2s ease-in-out;
+        }
+
+        .nav-text{
+          position: absolute;
+          bottom: -20px;
+          opacity: 0;
+
+          transition: 0.2s ease-in-out;
+        }
+
+
+        &.active{
+          .nav-icon {
+            transform: translateY(-22px);
+            color: black;
+          }
+
+          .nav-text{
+            opacity: 1;
+            bottom: -5px;
+          }
+        }
+
+        &:nth-child(2).active ~ .selection{
+          left: 90px;
+        }
+
+        &:nth-child(3).active ~ .selection{
+          left: 165px;
+        }
+
+        &:nth-child(4).active ~ .selection{
+          left: 240px;
+        }
+      }
+
+      .selection {
+        $size: 50px;
+        width: $size;
+        height: $size;
+        background-color: $selection-bg;
+        border: 4px solid $body-bg;
+        border-radius: 50px;
+
+        position: absolute;
+        top: $selection-initial-top;
+        left: $selection-initial-left;
+
+        transition: .2s ease-in-out;
+
+        &::before, &::after{
+          content: '';
+          $curve-size: 10px;
+          width: $curve-size;
+          height: $curve-size;
+          background-color: $nav-bg;
+          box-shadow: 0 -5px 0 0 $body-bg;
+        }
+        &::before{
+          border-top-right-radius: $nav-border-radius;
+          position: absolute;
+          top: 23px;
+          left: -13px;
+        }
+        &::after{
+          border-top-left-radius: $nav-border-radius;
+
+          position: absolute;
+          top: 23px;
+          right: -13px;
+        }
+      }
+    }
+  }
+}
